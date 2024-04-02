@@ -130,6 +130,8 @@ router.get('/:id/message', async (req, res) =>{
         } else {
             const messages = await Post.findPostComments(req.params.id)
             res.json(messages)
+            console.log(messages)
+            
         }
 
     } catch (err) {
